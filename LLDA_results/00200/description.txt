@@ -1,0 +1,2 @@
+CVB0LabeledLDA v0 [Stanford Topic Modeling Toolbox]
+CSVFile("parsed_numbered_RocketLawyerPrelimData_titlequestionTagsState.csv") ~> IDColumn(1) ~> Column(3) ~> TokenizeWith(SimpleEnglishTokenizer.V1() ~> CaseFolder() ~> WordsAndNumbersOnlyFilter() ~> MinimumLengthFilter(3)) ~> TermCounter() ~> TermMinimumDocumentCountFilter(4) ~> TermDynamicStopListFilter(30) ~> DocumentMinimumLengthFilter(5)

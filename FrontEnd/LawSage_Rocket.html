@@ -1,0 +1,80 @@
+<!-- This is syntax for a comment-->
+<!--Todo:  (3) more/less  (4) "..." at end of search result title-->
+
+
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>AJAX Solr</title>
+  <link rel="stylesheet" href="LawSage_Rocket_files/rocket.css">
+  <script src="LawSage_Rocket_files/jquery-1.11.1.js"></script>
+  <script src="LawSage_Rocket_files/jquery-ui.js"></script>
+  <link rel="stylesheet" href="LawSage_Rocket_files/jquery-ui.css">
+  <script src="LawSage_Rocket_files/rocket.js"></script>
+  <script src="LawSage_Rocket_files/Core.js"></script>
+  <script src="LawSage_Rocket_files/AbstractManager.js"></script>
+  <script src="LawSage_Rocket_files/Manager.js"></script>
+  <script src="LawSage_Rocket_files/Parameter.js"></script>
+  <script src="LawSage_Rocket_files/ParameterStore.js"></script>
+  <script src="LawSage_Rocket_files/AbstractWidget.js"></script>
+  <script src="LawSage_Rocket_files/ResultWidget.js"></script>
+  <script src="LawSage_Rocket_files/PagerWidget.js"></script>
+  <script src="LawSage_Rocket_files/AbstractFacetWidget.js"></script>
+  <script src="LawSage_Rocket_files/TagcloudWidget.js"></script>
+  <script src="LawSage_Rocket_files/ShowFiltersWidget.js"></script>
+  <script src="LawSage_Rocket_files/AbstractTextWidget.js"></script>
+  <script src="LawSage_Rocket_files/TextWidget.js"></script>
+  <script src="LawSage_Rocket_files/StateDropdownWidget.js"></script>
+  <script src="LawSage_Rocket_files/LegalAreaDropdownWidget.js"></script>
+  <script type="text/javascript" src="LawSage_Rocket_files/jquery-ui-plugins-textarea.js"></script>
+</head>
+<body>
+  <div id="wrap"> 
+    <div id="header">
+      <h1>Legal Informatics: Tech Demo (Karthik Jagadeesh, Brian Lao)</h1>
+      <!-- <h2>LawSage - Legal answers at your fingertips.</h2> -->
+    </div>
+
+    <div class="right">
+      <div id="result">
+        <div id="navigation">
+          <ul id="pager"><li><span class="pager-disabled pager-prev">&lt;</span></li><li> <span class="pager-current">1</span></li><li> <a rel="next" href="#">2</a></li><li> <a rel="" href="#">3</a></li><li> <span class="pager-gap">…</span></li><li> <a rel="" href="#">2157</a></li><li> <a rel="" href="#">2158</a></li><li> <a class="pager-next" rel="next" href="#">&gt;</a></li></ul>
+          <div id="pager-header"><span>displaying 1 to 10 of 21578</span></div>
+        </div>
+        <div id="docs"><div><h2>&nbsp;</h2></div></div>
+      </div>
+    </div>
+    <div class="left">
+      <h2>Current Selection</h2>
+      <ul id="selection"><li>Viewing all documents!</li></ul>  <!-- This displays what the ShowFilters widget is doing.  it knows to use the "selection" js functionality here because the ID instantiation in rocket.js is named "selection" -->
+
+      <h2>Search</h2>
+      <span id="search_help">(press ESC to close suggestions)</span>
+      <ul id="search">  <!-- it knows to use the "search" js functionality here because the ID instantiation in rocket.js is named "search" -->
+      	<textarea name "myTextarea" id="myTextarea" rows="10" cols="40"></textarea>  <!-- This is new, a bigger multi-line textbox instead of a single line one.-->
+      <!--Decided not to use this, just was causoig problemes
+	  <script type="text/javascript"> 
+        $(function() {                              
+      		$('#myTextarea').textarea({
+              'maxChars': 150, 
+              		'charLimitMessage': '{ENTERED} of {MAX} characters, {REMAINING} left'                                   
+      	});               
+  		  });
+        </script>
+        -->
+        <!--<input name="query" type="text" id="query" autocomplete="off"> --> <!-- this used to be original-->
+      </ul>
+      
+      <h2>State</h2>
+      <div id="state"></div>
+      
+      <h2>Legal Area</h2>
+      <div id="legalArea"></div>
+      
+    </div>
+    <div class="clear"></div>
+  </div>  
+
+
+</body></html>

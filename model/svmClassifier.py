@@ -120,10 +120,6 @@ if vectorizerOpt == 'BagOfWords':
   Tfidf_train = vectorizer.fit_transform(X_train)
   Tfidf_test = vectorizer.transform(X_test)
 
-  # only use bag of worsd and tfidf as features
-  #X_train = hstack([BOW_train,Tfidf_train])
-  #X_test = hstack([BOW_test,Tfidf_test])
-
   # use topic distributions and tfidf as features
   X_train = hstack([Tfidf_train,np.array(training_distributions)])
   X_test = hstack([Tfidf_test, np.array(test_distributions)])
